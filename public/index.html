@@ -1,93 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Shrivatsa Naik</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
+  <style>
+    :root {
+      --black: #111;
+      --gray-dark: #333;
+      --gray: #666;
+      --gray-light: #e5e5e5;
+    }
 
-        header {
-            background-color: #222;
-            color: white;
-            padding: 30px 10px;
-            text-align: center;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", "Segoe UI", sans-serif;
+    }
 
-        section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
+    body {
+  background: #f9fafb;   /* soft off-white */
+  color: #111;
+  line-height: 1.7;
+}
 
-        h2 {
-            color: #222;
-            margin-bottom: 10px;
-        }
 
-        .card {
-            background: white;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 60px 20px;
+      .container {
+  background: white;
+  border-radius: 12px;
+}
 
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: #222;
-            color: white;
-        }
+    }
 
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-    </style>
+    /* ---------- HEADER ---------- */
+    header {
+      text-align: center;
+      margin-bottom: 70px;
+    }
+
+    header img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+    header h1 {
+      font-size: 36px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      margin-top: 10px;
+      color: var(--gray);
+      font-size: 16px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ---------- SECTION ---------- */
+    section {
+      margin-bottom: 60px;
+    }
+
+    section h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 18px;
+      border-bottom: 1px solid var(--gray-light);
+      padding-bottom: 8px;
+    }
+
+    section p {
+      color: var(--gray-dark);
+      margin-bottom: 14px;
+    }
+
+    /* ---------- SKILLS ---------- */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+
+    .skill {
+      padding: 8px 0;
+      color: var(--gray-dark);
+    }
+
+    /* ---------- LIST ---------- */
+    ul {
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 10px;
+      color: var(--gray-dark);
+    }
+
+    /* ---------- CONTACT ---------- */
+    .contact a {
+      color: black;
+      text-decoration: none;
+      border-bottom: 1px solid black;
+    }
+
+    .contact a:hover {
+      color: var(--gray);
+      border-color: var(--gray);
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid var(--gray-light);
+      color: var(--gray);
+      font-size: 14px;
+    }
+    .socials {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.socials a {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #111;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.socials a:hover {
+  background: #111;
+}
+
+.socials svg {
+  width: 18px;
+  height: 18px;
+  fill: #111;
+}
+
+.socials a:hover svg {
+  fill: white;
+}
+.feedback-form {
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background: white;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #111;
+}
+
+button {
+  background: #111;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+  </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Your Name</h1>
-    <p>Web Developer | Student | Beginner</p>
-</header>
+  <div class="container">
 
+    <!-- HEADER -->
+    <header>
+      <img src="profile.jpg" alt="Shrivatsa Naik" />
+      <h1>Shrivatsa Naik</h1>
+      <p>
+        Computer Science student interested in backend development,
+        programming fundamentals, and building reliable software systems.
+      </p>
+      <div class="socials">
+  <a href="https://github.com/Shrivatsanaik7" target="_blank" aria-label="GitHub">
+    <!-- GitHub -->
+    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.31 6.84 9.66.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.38-3.37-1.38-.45-1.18-1.11-1.49-1.11-1.49-.9-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.36-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.74-.1-.26-.45-1.32.1-2.75 0 0 .84-.27 2.75 1.05A9.2 9.2 0 0 1 12 6.8c.85 0 1.7.12 2.5.35 1.9-1.32 2.75-1.05 2.75-1.05.55 1.43.2 2.49.1 2.75.64.71 1.03 1.62 1.03 2.74 0 3.94-2.34 4.81-4.57 5.06.36.32.68.95.68 1.91 0 1.38-.01 2.5-.01 2.84 0 .26.18.57.69.47A10.03 10.03 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg>
+  </a>
+
+  <a href="https://www.linkedin.com/in/shrivatsa-naik-b18ba5315/" target="_blank" aria-label="LinkedIn">
+    <!-- LinkedIn -->
+    <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.38V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.24 2.36 4.24 5.43v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+  </a>
+
+  <a href="https://x.com/NaikShrivatsa" target="_blank" aria-label="X">
+    <!-- X (Twitter) -->
+    <svg viewBox="0 0 24 24"><path d="M18.36 2H21l-7.19 8.21L22 22h-6.58l-5.15-6.74L4.33 22H2l7.64-8.73L2 2h6.74l4.66 6.12L18.36 2z"/></svg>
+  </a>
+</div>
+    </header>
+
+    <!-- ABOUT -->
+    <section>
+      <h2>About</h2>
+      <p>
+        I am a student developer focused on strengthening my core programming
+        skills and understanding how real-world software systems are built.
+        My interests lie mainly in backend development, APIs, and data handling.
+      </p>
+      <p>
+        I enjoy learning by building small projects, experimenting with
+        different technologies, and improving code quality over time.
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill">JavaScript</div>
+        <div class="skill">Java (Core)</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">Express.js</div>
+        <div class="skill">Python</div>
+        <div class="skill">Pandas (Data Analysis)</div>
+        <div class="skill">HTML & CSS</div>
+        <div class="skill">Git & GitHub</div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <strong>Portfolio Website</strong> — Personal website built using
+          HTML, CSS, and served using Node.js & Express.
+        </li>
+        <li>
+          <strong>Student Marks Analyzer</strong> — Python project using
+          Pandas to analyze and visualize student performance.
+        </li>
+        <li>
+          <strong>Backend Practice APIs</strong> — Simple REST APIs built
+          using Express.js to understand routing and data handling.
+        </li>
+      </ul>
+    </section>
+
+    <!-- LEARNING -->
+    <section>
+      <h2>Currently Learning</h2>
+      <ul>
+        <li>Advanced JavaScript concepts</li>
+        <li>Backend architecture basics</li>
+        <li>REST API design principles</li>
+        <li>Data processing with Python</li>
+      </ul>
+    </section>
+
+    <!-- GOAL -->
+    <section>
+      <h2>Career Objective</h2>
+      <p>
+        To start my career as a software engineer, gain strong industry
+        fundamentals, and work in an environment where learning and
+        problem-solving are valued.
+      </p>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>
+        Email:
+        <a href="mailto:shrivatsanaik@gmail.com">
+          shrivatsanaik@gmail.com
+        </a>
+      </p>
+    </section>
 <section>
-    <div class="card">
-        <h2>About Me</h2>
-        <p>
-            I am learning web development. This portfolio is created to test
-            website hosting and basic HTML/CSS skills.
-        </p>
+  <h2>Feedback</h2>
+<form class="feedback-form" method="POST" action="/send-feedback">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
     </div>
 
-    <div class="card">
-        <h2>Projects</h2>
-        <ul>
-            <li>Portfolio Website</li>
-            <li>Simple Calculator</li>
-            <li>To-Do List App</li>
-        </ul>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required>
     </div>
 
-    <div class="card">
-        <h2>Contact</h2>
-        <p>Email: yourmail@example.com</p>
-        <p>GitHub: <a href="#">github.com/yourname</a></p>
+    <div class="form-group">
+      <label for="message">Feedback</label>
+      <textarea id="message" name="message" rows="5" placeholder="Your feedback..." required></textarea>
     </div>
+
+    <button type="submit">Send Feedback</button>
+  </form>
 </section>
 
-<footer>
-    <p>© 2026 Your Name</p>
-</footer>
+    <!-- FOOTER -->
+    <footer>
+      © 2026 Shrivatsa Naik
+    </footer>
+
+  </div>
 
 </body>
 </html>
